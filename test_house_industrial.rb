@@ -94,4 +94,11 @@ live_loop :snare do
     end
   end
 end
+live_loop :creash do
+  sleep 23
+  with_fx :reverb, mix: 1, amp: 1.75 do
+    sample :drum_splash_hard, rate: 0.85, amp: 1
+  end
+end
+
 #end
