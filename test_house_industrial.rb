@@ -102,7 +102,7 @@ live_loop :snare do
   end
   with_fx :reverb, mix: 0.5, amp: 2 do
     with_fx :bitcrusher, mix: 1, bits: 7 do
-      sample :drum_snare_hard, rate: 1, amp: 1.5
+      sample :drum_snare_hard, rate: 1, amp: 0.5
     end
   end
 end
