@@ -1,37 +1,40 @@
 #intro
-2.times do
-  sample :drum_bass_hard, rate: 1, amp: 1
-  sleep 0.125
-end
-6.times do
-  sample :drum_bass_hard, rate: 1, amp: 1
-  sleep 0.0625
-end
-4.times do
-  sample :drum_bass_hard, rate: 1, amp: 1
-  sleep 0.5
-end
-6.times do
+comment do
+  2.times do
+    sample :drum_bass_hard, rate: 1, amp: 1
+    sleep 0.125
+  end
+  6.times do
+    sample :drum_bass_hard, rate: 1, amp: 1
+    sleep 0.0625
+  end
+  4.times do
+    sample :drum_bass_hard, rate: 1, amp: 1
+    sleep 0.5
+  end
+  6.times do
+    sample :drum_bass_hard, rate: 1, amp: 1
+    sample :drum_snare_hard, rate: 1, amp: 2
+    sleep 0.05
+  end
+  sleep 0.25
   sample :drum_bass_hard, rate: 1, amp: 1
   sample :drum_snare_hard, rate: 1, amp: 2
-  sleep 0.05
-end
-sleep 0.25
-sample :drum_bass_hard, rate: 1, amp: 1
-sample :drum_snare_hard, rate: 1, amp: 2
-sleep 0.25
-sample :drum_bass_hard, rate: 1, amp: 1
-sleep 0.25
-
-3.times do
-  with_fx :reverb, mix: 1, amp: 2.5 do
-    sample :drum_snare_hard, rate: 1, amp: 2
-    sample :drum_bass_hard, rate: 1, amp: 1
-    sample :bd_boom, rate: 0.5, amp: 5
+  sleep 0.25
+  sample :drum_bass_hard, rate: 1, amp: 1
+  sleep 0.25
+  
+  3.times do
+    with_fx :reverb, mix: 1, amp: 2.5 do
+      sample :drum_snare_hard, rate: 1, amp: 2
+      sample :drum_bass_hard, rate: 1, amp: 1
+      sample :bd_boom, rate: 0.5, amp: 5
+    end
+    sleep 0.05
   end
-  sleep 0.05
 end
-#loops
+#Haunty loops
+#comment do
 live_loop :syn do
   with_fx :reverb, mix: 1 do
     with_fx :krush, mix: 1, gain: 1 do
@@ -51,6 +54,7 @@ live_loop :syn do
   end
 end
 sleep 23
+#end
 #comment do
 live_loop :hh_hats do
   6.times do
@@ -91,14 +95,14 @@ end
 live_loop :snare do
   sleep 1
   with_fx :compressor, mix: 1 do
-    with_fx :reverb, mix: 1 do
+    with_fx :reverb, mix: 1, amp: 2 do
       sample :sn_generic, rate: 1, amp: 0.5
       sample :elec_snare, rate: 1, amp: 1
     end
   end
   with_fx :reverb, mix: 0.5, amp: 2 do
     with_fx :bitcrusher, mix: 1, bits: 7 do
-      sample :drum_snare_hard, rate: 1, amp: 1
+      sample :drum_snare_hard, rate: 1, amp: 1.5
     end
   end
 end
