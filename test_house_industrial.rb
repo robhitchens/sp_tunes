@@ -33,7 +33,7 @@ comment do
     sleep 0.05
   end
 end
-
+#This started out being more like industrial, but now has turned into more dark ambient noise than anything.
 #intor
 with_fx :reverb, mix: 1 do
   with_fx :krush, mix: 1, gain: 1 do
