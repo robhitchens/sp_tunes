@@ -150,4 +150,10 @@ live_loop :creash do
     sample :drum_splash_hard, rate: 0.75, amp: 1
   end
 end
+live_loop :boom_boom do
+  sleep 21
+  with_fx :reverb, room: 1 do
+    sample :bd_boom, amp: 6, rate: 1
+  end
+end
 #end
