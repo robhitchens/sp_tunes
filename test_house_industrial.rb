@@ -11,9 +11,17 @@ end
   sample :drum_bass_hard, rate: 1, amp: 1
   sleep 0.5
 end
+6.times do
+  sample :drum_bass_hard, rate: 1, amp: 1
+  sample :drum_snare_hard, rate: 1, amp: 2
+  sleep 0.05
+end
+sleep 0.25
 sample :drum_bass_hard, rate: 1, amp: 1
 sample :drum_snare_hard, rate: 1, amp: 2
-sleep 0.5
+sleep 0.25
+sample :drum_bass_hard, rate: 1, amp: 1
+sleep 0.25
 
 3.times do
   with_fx :reverb, mix: 1, amp: 2.5 do
@@ -81,7 +89,7 @@ live_loop :beat do
   end
 end
 live_loop :snare do
-  sleep 1.125
+  sleep 1
   with_fx :compressor, mix: 1 do
     with_fx :reverb, mix: 1 do
       sample :sn_generic, rate: 1, amp: 0.5
