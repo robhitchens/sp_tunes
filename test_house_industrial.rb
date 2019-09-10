@@ -86,16 +86,16 @@ sleep 13
   sleep 0.05
 end
 live_loop :hh_hats do
-  
-  6.times do
-    sample :drum_cymbal_closed, rate: 1, amp: 1, attack_level: 4
-    sleep 0.0625
+  with_fx :bitcrusher, mix: 1, amp: 1, bits: 6 do
+    6.times do
+      sample :drum_cymbal_closed, rate: 1, amp: 1, attack_level: 4
+      sleep 0.0625
+    end
+    10.times do
+      sample :drum_cymbal_closed, rate: 1, amp: 1, attack_level: 2
+      sleep 0.125
+    end
   end
-  10.times do
-    sample :drum_cymbal_closed, rate: 1, amp: 1, attack_level: 2
-    sleep 0.125
-  end
-  
 end
 live_loop :beat do
   3.times do
