@@ -81,7 +81,7 @@ live_loop :beat do
   end
 end
 live_loop :snare do
-  sleep 1
+  sleep 1.125
   with_fx :compressor, mix: 1 do
     with_fx :reverb, mix: 1 do
       sample :sn_generic, rate: 1, amp: 0.5
