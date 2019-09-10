@@ -53,6 +53,7 @@ with_fx :reverb, mix: 1 do
     end
   end
 end
+
 #Haunty loops
 #comment do
 live_loop :syn do
@@ -62,12 +63,13 @@ live_loop :syn do
         with_synth :dark_ambience do
           4.times do
             play_pattern [:a3, :e3, :d4], amp: 20, attack: 0.25
+            sleep 0.75
             play_chord [:g2, :b3, :a4], amp: 20, attack: 0.25, decay: 0.5
             sleep 0.5
-            play_chord [:f3, :e7, :c4], amp: 20, attack: 0.25, decay: 1, sustain: 2, release: 0.25
-            sleep 4
+            play_chord [:f3, :e7, :c4], amp: 25, attack: 0.25, decay: 1, sustain: 2, release: 0.25
+            sleep 6
           end
-          sleep 5
+          sleep 6
         end
       end
     end
